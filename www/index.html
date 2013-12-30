@@ -30,7 +30,7 @@ function updateTime() {
 updateTime()
 
 function onConfirm(button) {
-    alert('You selected button ' + button);
+    alert('You selected button ' + button + '\n Excellent!');
 }
 
 
@@ -51,7 +51,8 @@ function addTime(t) {
             'You are the CONFIRMED winner!',  // message
             onConfirm,              // callback to invoke with index of button pressed
             'Game Over is the Title',            // title
-            'button1,button2,button3'            // OK this outputs "button3", "button2", "button1" which makes sense...
+            'button1,button2'            // OK this outputs "button3", "button2", "button1" which makes sense...
+            // 'button1,button2,button3'            // OK this outputs "button3", "button2", "button1" which makes sense...
             //'This is 3,Restart is 2,Exit is 1'          // buttonLabels output is "ExitIs1". "Restart Is 2", "This is 3"
                                                           // which correspond to "button 3", "button 2", "button 1" WTF?
             // 'Restart is 2,Exit is 1'          // buttonLabels are ordered 2,1 in this example
