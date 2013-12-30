@@ -32,7 +32,9 @@ updateTime()
 function onConfirm(button) {
     alert('You selected button ' + button + 
           '\nExcellent!' +
-          '\nThis thing might actually work in some possible way...');
+          '\nThis thing might actually work in some possible way...' +
+          '\nWe will now beep ' + button ' times!');
+   navigator.notification.beep(button);
 }
 
 
@@ -59,7 +61,7 @@ function addTime(t) {
                                                           // which correspond to "button 3", "button 2", "button 1" WTF?
             // 'Restart is 2,Exit is 1'          // buttonLabels are ordered 2,1 in this example
         );
-        navigator.notification.beep(1)
+        // navigator.notification.beep(1)
 
     }
 }
