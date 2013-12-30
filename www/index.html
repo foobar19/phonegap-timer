@@ -45,17 +45,18 @@ function addTime(t) {
         timeout = setTimeout(addTime, 1000)
     } else if (stopTime > 0) {
         timeDiv.text('buzzzZZZ!!!')
-        navigator.notification.vibrate(500)
-        navigator.notification.beep(1)
+        // navigator.notification.vibrate(500)
         // navigator.notification.alert('You are the ALERTED winner!')
         navigator.notification.confirm(
             'You are the CONFIRMED winner!',  // message
             onConfirm,              // callback to invoke with index of button pressed
             'Game Over is the Title',            // title
-            'This is 3,Restart is 2,Exit is 1'          // buttonLabels
+            'button1,button2,button3'
+            //'This is 3,Restart is 2,Exit is 1'          // buttonLabels output is "ExitIs1". "Restart Is 2", "This is 3"
+                                                          // which correspond to "button 3", "button 2", "button 1" WTF?
             // 'Restart is 2,Exit is 1'          // buttonLabels are ordered 2,1 in this example
         );
-
+        navigator.notification.beep(1)
 
     }
 }
