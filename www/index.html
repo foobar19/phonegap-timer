@@ -42,6 +42,13 @@ function addTime(t) {
         timeDiv.text('buzzzZZZ!!!')
         navigator.notification.vibrate(1000)
         navigator.notification.beep(2)
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+
     }
 }
 
