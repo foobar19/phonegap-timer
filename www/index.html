@@ -53,6 +53,7 @@ function addTime(t) {
             onConfirm,              // callback to invoke with index of button pressed
             'Game Over is the Title',            // title
             'This is 3,Restart is 2,Exit is 1'          // buttonLabels
+            // 'Restart is 2,Exit is 1'          // buttonLabels are ordered 2,1 in this example
         );
 
 
@@ -71,8 +72,8 @@ $(function () {
         )
     ).append(
         $('<div class="container">').append(
-            $('<button class="btn btn-default">').text('3 sec').click(function () {
-                addTime(1000 * 3)
+            $('<button class="btn btn-default">').text('1 sec').click(function () {
+                addTime(1000 * 1)
             })
         ).append(
             $('<button class="btn btn-default">').text('1 min').click(function () {
