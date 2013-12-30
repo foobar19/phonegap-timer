@@ -29,6 +29,11 @@ function updateTime() {
 }
 updateTime()
 
+function onConfirm(button) {
+    alert('You selected button ' + button);
+}
+
+
 function addTime(t) {
     if (t) {
         if (stopTime < _.time()) stopTime = _.time()
@@ -40,9 +45,16 @@ function addTime(t) {
         timeout = setTimeout(addTime, 1000)
     } else if (stopTime > 0) {
         timeDiv.text('buzzzZZZ!!!')
-        navigator.notification.vibrate(1000)
-        navigator.notification.beep(2)
+        navigator.notification.vibrate(500)
+        navigator.notification.beep(1)
         navigator.notification.alert('You are the winner!')
+        navigator.notification.confirm(
+            'You are the CONFIRMED winner!',  // message
+            onConfirm,              // callback to invoke with index of button pressed
+            'Game Over',            // title
+            'Restart,Exit'          // buttonLabels
+        );
+
 
     }
 }
@@ -59,8 +71,8 @@ $(function () {
         )
     ).append(
         $('<div class="container">').append(
-            $('<button class="btn btn-default">').text('5 sec').click(function () {
-                addTime(1000 * 5)
+            $('<button class="btn btn-default">').text('3 sec').click(function () {
+                addTime(1000 * 3)
             })
         ).append(
             $('<button class="btn btn-default">').text('1 min').click(function () {
