@@ -47,12 +47,12 @@ function addTime(t) {
         timeDiv.text('buzzzZZZ!!!')
         navigator.notification.vibrate(500)
         navigator.notification.beep(1)
-        navigator.notification.alert('You are the winner!')
+        // navigator.notification.alert('You are the ALERTED winner!')
         navigator.notification.confirm(
             'You are the CONFIRMED winner!',  // message
             onConfirm,              // callback to invoke with index of button pressed
-            'Game Over',            // title
-            'Restart,Exit'          // buttonLabels
+            'Game Over is the Title',            // title
+            'This is 3,Restart is 2,Exit is 1'          // buttonLabels
         );
 
 
