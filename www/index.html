@@ -39,7 +39,7 @@ function addTime(t) {
     if (updateTime() > 0) {
         timeout = setTimeout(addTime, 1000)
     } else if (stopTime > 0) {
-        timeDiv.text('buzz!!!')
+        timeDiv.text('buzzzZZZ!!!')
         navigator.notification.vibrate(1000)
     }
 }
@@ -56,6 +56,8 @@ $(function () {
         )
     ).append(
         $('<div class="container">').append(
+		    $('<button class="btn btn-default">').text('1 min').click(function () {
+                addTime(1000 * 5)
             $('<button class="btn btn-default">').text('1 min').click(function () {
                 addTime(1000 * 60)
             })
