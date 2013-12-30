@@ -30,10 +30,10 @@ function updateTime() {
 updateTime()
 
 function onConfirm(button) {
-    alert('You selected button ' + button)
-    // navigator.notification.beep(button);
-    beep(button); // let's try a shorter version...
-    alert('We have just beeped ' + button + ' times!')
+    alert('You selected button ' + button);
+    navigator.notification.beep(button);
+    // beep(button); // let's try a shorter version... nope beep(button) seems to fail and the second alert is skipped too
+    alert('We have just beeped ' + button + ' times!');
 /*    alert('You selected button ' + button + 
           '\nExcellent!' +
           '\nThis thing might actually work in some possible way...' +
