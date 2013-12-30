@@ -41,6 +41,7 @@ function addTime(t) {
     } else if (stopTime > 0) {
         timeDiv.text('buzzzZZZ!!!')
         navigator.notification.vibrate(1000)
+        navigator.notification.beep(2)
     }
 }
 
